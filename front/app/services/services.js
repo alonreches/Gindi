@@ -29,7 +29,7 @@ angular.module('Artify')
                     console.error("Problem in the analyze function!");
                     return;
                 }
-
+                console.log("Starting upload!");
                 $http.post(BASE_URL, fd, {
                     // this cancels AngularJS normal serialization of request
                     transformRequest: angular.identity,
