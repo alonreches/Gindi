@@ -13,12 +13,12 @@ angular.module('Artify')
             templateUrl: 'app/components/views/home.view.html'
         };
     }])
-    .directive('dialog', ['$location', '$rootScope',
+    .directive('uploadFormat', ['$location', '$rootScope',
         function ($location, $rootScope) {
             return {
                 restrict: 'E',
-                templateUrl: 'app/components/views/dialog.view.html',
-                controller: 'ConversationController'
+                templateUrl: 'app/components/views/uploadFormat.view.html',
+                controller: 'UploadController'
             };
         }])
 .directive('apsUploadFile', apsUploadFile)
