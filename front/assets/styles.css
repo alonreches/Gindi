@@ -41,6 +41,7 @@ li {
     width: 100%;
     padding: 20px;
     margin: 60px auto;
+    background-color: white;
 }
 
 .album-cover img {
@@ -52,10 +53,21 @@ li {
     margin-bottom: 20px;
 }
 
+.processCircle {
+    margin: 60px  auto 10px;
+}
+.processingContainer{
+    background-color: white;
+}
+.uploadContainer{
+    background-color: white;
+    width: 640px;
+    margin: 0;
+
+}
 @media (min-width: 720px) {
     .main-container {
         width: 680px;
     }
-
 }
 

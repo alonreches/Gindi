@@ -37,15 +37,12 @@ function apsUploadFile() {
 function apsUploadFileLink(scope, element, attrs) {
     var input = $(element[0].querySelector('#fileInput'));
     var button = $(element[0].querySelector('#uploadButton'));
-    var textInput = $(element[0].querySelector('#textInput'));
 
     if (input.length && button.length) {
         button.click(function (e) {
             input.click();
         });
-        textInput.click(function (e) {
-            input.click();
-        });
+
     }
 
     input.on('change', function (e) {
