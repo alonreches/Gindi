@@ -22,12 +22,13 @@ angular.module('Artify')
             };
         }])
 .directive('apsUploadFile', apsUploadFile)
+directive('takePicture', apsUploadFile)
 ;
 
 function apsUploadFile() {
     var directive = {
         restrict: 'E',
-        templateUrl: 'upload.file.template.html',
+        templateUrl: 'app/components/views/upload.file.template.html',
         link: apsUploadFileLink
     };
     return directive;
@@ -38,7 +39,7 @@ function apsUploadFileLink(scope, element, attrs) {
     var button = $(element[0].querySelector('#uploadButton'));
     var textInput = $(element[0].querySelector('#textInput'));
 
-    if (input.length && button.length && textInput.length) {
+    if (input.length && button.length) {
         button.click(function (e) {
             input.click();
         });
@@ -58,5 +59,16 @@ function apsUploadFileLink(scope, element, attrs) {
     });
 }
 
+function takePicture(){
+    var directive = {
+        restrict: 'E',
+        templateUrl: 'app/components/views/takePicture.template.html',
+        link: takePictureLink
+    };
+    return directive;
+}
+
+function takePictureLink(scope, element, attrs) {
+}
 
 

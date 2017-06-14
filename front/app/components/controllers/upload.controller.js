@@ -3,7 +3,7 @@ angular.module('Artify')
     .controller('UploadController', ['$scope', '$rootScope', '$location', '$mdMedia', '$mdMenu', 'WebService', '$mdDialog',
         function ($scope, $rootScope, $location, $mdMedia, $mdMenu, WebService, $mdDialog) {
 
-            $scope.userInput = "";
+            // $scope.userInput = "";
 
             $rootScope.showNavLogo = false;
 
