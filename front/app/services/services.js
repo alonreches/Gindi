@@ -45,13 +45,13 @@ angular.module('Artify')
                 })
                     .success(function (result) {
 
-                        var data = result.data;
+                        var data = result;
                         service.results = {
                             album_cover: 'assets/images/album_cover_example.jpg',
                             title: data.name,
                             artist: data.artist,
                             album: data.album,
-                            mainGenre: 'Rock'
+                            artwork: data.cover
                         };
                         $location.path('/results');
                     })
