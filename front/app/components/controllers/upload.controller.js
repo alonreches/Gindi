@@ -1,6 +1,6 @@
 angular.module('Artify')
 
-    .controller('DialogController', ['$scope', '$rootScope', '$location', '$mdMedia', '$mdMenu', 'WebService', '$mdDialog',
+    .controller('UploadController', ['$scope', '$rootScope', '$location', '$mdMedia', '$mdMenu', 'WebService', '$mdDialog',
         function ($scope, $rootScope, $location, $mdMedia, $mdMenu, WebService, $mdDialog) {
 
             $scope.userInput = "";
