@@ -30,6 +30,15 @@ def get_image_data(image):
     return result
 
 
+def get_keywords(image):
+    res = []
+    image_data = vision_client.image(content=image)
+    labels = image_data.detect_labels()
+    for label in labels:
+        res.append(label.description)
+    return res
+
+
 def get_color_by_image(image):
     image_data = vision_client.image(content=image)
     properties = image_data.detect_properties()
