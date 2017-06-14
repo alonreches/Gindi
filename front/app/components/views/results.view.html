@@ -1,24 +1,23 @@
 <div>
     <div class="main-container">
-
-    </div>
-    <div class="image">
-        <img src="" />
-    </div>
-    <div class="song-title">
-        <h1>{{results.title}}</h1>
-    </div>
-    <div class="song-title">
-        <ul class="song-details">
-            <li>
-                {{results.artist}}
-            </li>
-            <li>
-                {{results.album}}
-            </li>
-            <li>
-                {{results.mainGenre}}
-            </li>
-        </ul>
+        <div class="image">
+            <img src="{{results.album_cover}}" />
+        </div>
+        <div class="song-title">
+            <h1>{{results.title}}</h1>
+        </div>
+        <div class="song-title">
+            <ul class="song-details">
+                <li>
+                    {{results.artist}}
+                </li>
+                <li>
+                    {{results.album}}
+                </li>
+                <li>
+                    {{results.mainGenre}}
+                </li>
+            </ul>
+        </div>
     </div>
 </div>

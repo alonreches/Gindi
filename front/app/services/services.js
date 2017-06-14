@@ -9,7 +9,7 @@ angular.module('Artify')
             var service = {};
 
             service.results = {
-                artwork_image: '',
+                album_cover: 'assets/images/album_cover_example.jpg',
                 title: 'Because',
                 artist: 'Beatles',
                 album: 'Abby Road',
