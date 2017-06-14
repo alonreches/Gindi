@@ -7,7 +7,7 @@ angular.module('Artify')
         function WebServiceFactory($http, $rootScope, $location) {
 
             var service = {};
-            var BASE_URL = "";
+            var BASE_URL = "http://127.0.0.1:8000/gindi/labels";
 
             service.results = {
                 artwork: 'assets/images/album_cover_example.jpg',
@@ -45,7 +45,6 @@ angular.module('Artify')
                     headers: {'Content-Type': undefined}
                 })
                     .success(function (result) {
-                        console.log(data.cover);
                         var data = result;
                         service.results = {
                             album_cover: 'assets/images/album_cover_example.jpg',

@@ -1,3 +1,5 @@
+from spotify_matcher import *
+import io
 from django.shortcuts import render
 from django.http import HttpResponse, JsonResponse
 from get_image_data import *
@@ -8,9 +10,24 @@ def index(request):
 
 
 def image_labels(request):
+    res = {}
     if request.method == 'POST':
-        image = request.POST.get('image')
-        return JsonResponse(get_image_data(image.encode("utf-8")))
+        image = request.FILES["myFile"]
+        with open('picture.jpg', 'wb+') as f:
+            for chunk in image.chunks():
+                f.write(chunk)
+        with io.open("picture.jpg", "rb") as pic:
+            content = pic.read()
+        gen_image(content)
+        color = get_color_by_image(content)
+        labels = get_image_data(content)
+        song = get_recommendations(color, labels)["tracks"][0]
+        res["name"] = song["name"]
+        res["album"] = song["album"]["name"]
+        res["artist"] = song["artists"][0]["name"]
+        res["cover"] = song["album"]["images"][0]["url"]
+        res["words"] = get_keywords(content)
+        return JsonResponse(res)
     return HttpResponse("bad request")
 
 
