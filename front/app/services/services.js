@@ -2,7 +2,7 @@
  * Created by gullumbroso on 22/08/2016.
  */
 
-angular.module('JibsApp')
+angular.module('Artify')
     .factory('WebService', ['$http', '$rootScope',
         function WebServiceFactory($http, $rootScope) {
 

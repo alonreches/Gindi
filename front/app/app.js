@@ -12,5 +12,5 @@ angular.module('Artify', ['ngAnimate', 'ngMaterial', 'ngRoute', 'ngCookies'])
 
     .run(['$rootScope', '$location','$http',
         function ($rootScope, $location, $http) {
-            // $rootScope.showNavLogo = false;
+            console.log("Hey!");
         }]);
