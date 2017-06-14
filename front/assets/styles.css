@@ -1,0 +1,380 @@
+html, body {
+    font-family: 'Open Sans', sans-serif;
+    background: white;
+    /*background: #dde7ea;*/
+}
+
+input:focus {
+    border: none !important;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+button {
+    border: 0;
+    padding: 0;
+    background: white;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.inline-block {
+    border-radius: 7px;
+    border: 2px solid lightgrey;
+    height: 100px;
+    width: 600px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.container {
+    padding-top: 100px;
+}
+
+.main-container {
+    margin: 40px;
+    padding: 40px;
+}
+
+
+.input-container {
+    margin-top: 10px;
+    position: relative;
+}
+
+.input-container span {
+    position: relative;
+    top: -11px;
+}
+
+.logo {
+    margin: 10px 0 50px;
+}
+
+.conversationContainer {
+    margin: auto;
+}
+
+@media (min-width: 900px) {
+    .conversationContainer {
+        width: 560px;
+    }
+}
+
+
+.textBox {
+    text-align: center;
+    margin-top: 20px;
+    width: 100%;
+    height: 80px;
+    border: 1px solid #f0f0f5;
+    border-radius: 3px;
+    box-shadow: 0 3px 4px rgba(0,0,0,0.15);
+    font-size: 1.3em;
+    padding: 10px 30px;
+    transition: all ease-out 0.3s;
+}
+
+.textBox:focus {
+}
+
+
+h4 {
+    font-size: 2.5em;
+    font-weight: 300;
+    line-height: 1.2em;
+    color: rgb(61, 57, 62);
+}
+
+md-input-container {
+
+    padding: 30px 25px;
+}
+
+.results {
+
+    max-height: 2000px;
+    opacity: 1;
+    transition: all ease-out 0.4s;
+    overflow: hidden;
+}
+
+.results p {
+    font-size: 3em;
+}
+
+.results.ng-hide {
+    opacity: 0;
+    max-height: 0;
+}
+
+.results .show-in-delay {
+    opacity: 1.0;
+    transition: all ease-out 0.4s;
+}
+
+.result-path ul li span {
+    color: #3F51B5;
+}
+
+.result-path ul li span.result-even {
+    color: #2196F3;
+}
+
+.go {
+    margin-top: 15px;
+    transition: all ease-out 0.4s;
+}
+
+.hoverSidenav{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    opacity: 0;
+}
+/*.stateCard {*/
+    /*border-radius: 20px;*/
+    /*margin-left: 30px;*/
+    /*margin-top: 55px;*/
+    /*width: 250px;*/
+    /*height: 170px;*/
+    /*background: #D81B60;*/
+/*}*/
+
+.state1 {
+    border-radius: 10px;
+    margin-left: 30px;
+    margin-top: 20px;
+    width: 200px;
+    height: 140px;
+    background: #f6105e;
+    box-shadow: 0 3px 4px rgba(220,200,230,0.15);
+
+}
+
+.state2 {
+    border-radius: 10px;
+    margin-left: 30px;
+    margin-top: 20px;
+    width: 200px;
+    height: 140px;
+    background: #ffb60b;
+    box-shadow: 0 3px 4px rgba(220,200,230,0.15);
+
+}
+.state3 {
+    border-radius: 10px;
+    margin-left: 30px;
+    margin-top: 20px;
+    width: 200px;
+    height: 140px;
+    background: #4262fe;
+    box-shadow: 0 3px 4px rgba(220,200,230,0.15);
+
+}
+
+.stateText{
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.2em;
+    /*line-height:1em;*/
+    padding-bottom: 20px;
+    font-weight: bold;
+    /*font-size: 50px;  !* Preferred icon size *!*/
+    display: inline-block;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    color: white;
+}
+
+
+.md-sidebar-left{
+    background: #433e41;
+
+}
+
+.pinButton{
+    margin-top: 20px;
+    margin-right: 20px;
+    background: #4262fe !important;
+    box-shadow: 0 3px 4px rgba(220,200,230,0.15);
+}
+.pressed {
+    background: #BBDEFB !important;
+}
+
+/*todo: check how to make line thinner*/
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: lighter;
+    font-style: normal;
+    font-size: 60px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1.0;
+    margin-top: 15px;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    color: white;
+}
+    /*.material-icon-pin {*/
+        /*font-family: 'Material Icons';*/
+        /*font-weight: normal;*/
+        /*font-style: normal;*/
+        /*font-size: 25px;*/
+        /*display: inline-block;*/
+        /*text-align: right;*/
+        /*!*line-height: 1.5;*!*/
+        /*text-transform: none;*/
+        /*letter-spacing: normal;*/
+        /*word-wrap: normal;*/
+        /*white-space: nowrap;*/
+        /*direction: ltr;*/
+        /*color: white;*/
+
+    /*}*/
+
+.md-icon-button.dialog {
+    margin-right: 3px !important;
+    padding: 0;
+    border-radius: 0;
+}
+
+.md-icon-button.dialog i {
+    color: #d3d3da;
+    border-radius: 0;
+    font-size: 50px;
+    line-height: 1em;
+}
+
+.extra-container {
+    width: 350px;
+    margin: 40px 0;
+}
+
+.navBar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    background: white;
+    height: 80px;
+    border-bottom: 1px solid rgba(234, 228, 220, 0.62);
+
+    /*border-bottom: 1px solid #ededf1;*/
+}
+
+.navBar .navbar-list {
+    margin: 0;
+}
+
+.navBar .navBarButton {
+    color: #ffb60b;
+    /*color: #304FFE;*/
+    font-size: 1.2em;
+    font-weight: 800;
+    line-height: 2.7em;
+    padding: 27px 20px;
+    /*margin-right: 10px;*/
+    transition: all ease-out 0.2s;
+}
+
+.navBar .navBarButton:hover {
+    background: #e6e6ed;
+}
+
+.mainButton {
+    color: white;
+    font-weight: bolder;
+    font-size: 1.3em;
+    margin-top: 25px;
+    padding: 13px 30px;
+    height: 60px;
+    min-width: 120px;
+    border-radius: 5px;
+    background-color: #f6105e;
+}
+
+.md-button.mainButton:not([disabled]):hover {
+    background-color: rgba(255, 90, 110, 0.76);
+}
+
+.googleSignIn {
+    margin: 30px 0 20px;
+}
+
+.googleSignIn img {
+    width: 340px;
+}
+
+.inputGroup {
+    margin-top: 30px;
+}
+
+label {
+    float: left;
+    font-size: 1.5em;
+}
+
+.subjectTextBox {
+    margin-top: 40px;
+    width: 100%;
+    height: 80px;
+    text-align: left;
+    font-size: 1.8em;
+
+    padding: 20px 30px;
+    border: 1px solid #f0f0f5;
+    border-radius: 3px;
+    box-shadow: 0 0.2em 0.4em rgba(0,0,0,0.3);
+}
+.contentTextBox {
+    margin-top: 40px;
+    width: 100%;
+    height: 400px;
+    text-align: left;
+    font-size: 1.3em;
+    padding: 20px 30px;
+    border: 1px solid #f0f0f5;
+    border-radius: 3px;
+    box-shadow: 0 0.2em 0.4em rgba(0,0,0,0.3);
+}
+
+.md-toolbar-people{
+    height:70px;
+    background: #f6105e;
+    font-size: 3em;
+    color: white;
+    margin-top: 20px;
+    border-radius: 3px;
+
+}
+.logoNavbar{
+    margin-top: 10px;
+    margin-right: 40px;
+
+}
+.md-2-line{
+    align-content: center;
+}
+
+mailContentDiv {
+    width: 760px;
+    margin: auto;
+}
+
+.contactDiv{
+    margin:auto;
+    width:400px;
+    /*align-content: center;*/
+}
