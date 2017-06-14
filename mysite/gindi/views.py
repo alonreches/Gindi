@@ -27,6 +27,7 @@ def image_labels(request):
         res["artist"] = song["artists"][0]["name"]
         res["cover"] = song["album"]["images"][0]["url"]
         res["words"] = get_keywords(content)
+        res["color"] = color
         return JsonResponse(res)
     return HttpResponse("bad request")
 

@@ -14,7 +14,8 @@ LIKELINESS = {"UNKNOWN": 0,
               "LIKELY": 0.7,
               "VERY_LIKELY": 0.95}
 
-vision_client = vision.Client("AIzaSyArQ4BOzwsUvc1gBiXMM580DIxCeEP58vs")
+vision_client = vision.Client("AIzaSyBeWV1ytw4wo-3VcIk_LzpZWTtXb6FacfU")
+# AIzaSyArQ4BOzwsUvc1gBiXMM580DIxCeEP58vs
 
 
 def gen_image(image):
