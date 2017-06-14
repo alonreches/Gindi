@@ -21,7 +21,15 @@ angular.module('Artify')
 
             return service;
 
-            function analyze() {
+            function analyze(file) {
+                var fd = new FormData();
+                if (file != null) {
+                    fd.append('myFile', file);
+                } else {
+                    console.error("Problem in the analyze function!");
+                    return;
+                }
+                console.log("Starting upload!");
                 $http.post(BASE_URL, fd, {
                     // this cancels AngularJS normal serialization of request
                     transformRequest: angular.identity,

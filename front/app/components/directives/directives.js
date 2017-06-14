@@ -48,9 +48,10 @@ function apsUploadFileLink(scope, element, attrs) {
     input.on('change', function (e) {
         var files = e.target.files;
         if (files[0]) {
-            scope.fileName = files[0].name;
+            scope.file = files[0];
+            scope.fileUploaded = true;
         } else {
-            scope.fileName = null;
+            scope.file = null;
         }
         scope.$apply();
     });
