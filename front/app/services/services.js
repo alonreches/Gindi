@@ -57,7 +57,7 @@ angular.module('Artify')
                     })
 
                     .error(function () {
-                        console.log("Something wrong :(");
+                        // console.log("Something wrong :(");
                         $location.path('/results');
                     });
             }

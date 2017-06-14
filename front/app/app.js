@@ -2,8 +2,8 @@ angular.module('Artify', ['ngAnimate', 'ngMaterial', 'ngRoute', 'ngCookies'])
 
     .config(function ($mdThemingProvider) {
         $mdThemingProvider.theme('default')
-            .primaryPalette('indigo', {
-                'default': 'A700'
+            .primaryPalette('grey', {
+                'default': '900'
             })
             .accentPalette('pink', {
                 'default': '500'
