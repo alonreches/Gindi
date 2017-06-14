@@ -1,9 +1,22 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
+from get_image_data import *
+
 
 def index(request):
-    print(dir(request))
     return HttpResponse("Hello, world")
+
+
+def image_labels(request):
+    if request.method == 'POST':
+        image = request.POST.get('image')
+        return JsonResponse(get_image_data(image.encode("utf-8")))
+    return HttpResponse("bad request")
+
+
+def image_color(request):
+    return HttpResponse(get_color_by_image(request.body))
+
 
 
 

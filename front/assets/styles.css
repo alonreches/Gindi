@@ -4,12 +4,58 @@ html, body {
     /*background: #dde7ea;*/
 }
 
-.uploadContainer{
+input:focus {
+    border: none !important;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+button {
+    border: 0;
+    padding: 0;
+    background: white;
+}
+
+.text-center {
+    text-align: center;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.uploadContainer {
     padding-top: 100px;
     width: 560px;
-
 }
 .main-container {
+    width: 100%;
+    padding: 20px;
+    margin: 60px auto;
+}
+
+.album-cover img {
+    -webkit-box-shadow: 0px 6px 30px 3px rgba(0,0,0,0.29);
+    -moz-box-shadow: 0px 6px 30px 3px rgba(0,0,0,0.29);
+    box-shadow: 0px 6px 30px 3px rgba(0,0,0,0.29);
+    width: 320px;
+    height: 320px;
+    margin-bottom: 20px;
+}
+
+@media (min-width: 720px) {
+    .main-container {
+        width: 680px;
+    }
 
 }
 

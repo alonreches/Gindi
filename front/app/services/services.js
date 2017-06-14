@@ -7,9 +7,10 @@ angular.module('Artify')
         function WebServiceFactory($http, $rootScope) {
 
             var service = {};
+            var BASE_URL = "";
 
             service.results = {
-                artwork_image: '',
+                album_cover: 'assets/images/album_cover_example.jpg',
                 title: 'Because',
                 artist: 'Beatles',
                 album: 'Abby Road',
@@ -21,7 +22,7 @@ angular.module('Artify')
             return service;
 
             function analyze() {
-
+                return $http.get(FIRST_ANSWER_URL, {params: {'firstQuestion': firstQuestion}});
             }
 
         }]);
