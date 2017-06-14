@@ -22,8 +22,8 @@ angular.module('Artify')
             return service;
 
             function analyze(file) {
+                var fd = new FormData();
                 if (file != null) {
-                    var fd = new FormData();
                     fd.append('myFile', file, 'image.jpg');
                 } else {
                     console.error("Problem in the analyze function!");
