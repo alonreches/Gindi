@@ -24,10 +24,12 @@ button {
 
 ul {
     margin: 0;
+    padding: 0;
 }
 
 li {
     margin: 0;
+    padding: 0;
     list-style-type: none;
 }
 
@@ -40,6 +42,15 @@ li {
     width: 100%;
     padding: 20px;
     margin: 60px auto;
+}
+
+.album-cover img {
+    -webkit-box-shadow: 0px 6px 30px 3px rgba(0,0,0,0.29);
+    -moz-box-shadow: 0px 6px 30px 3px rgba(0,0,0,0.29);
+    box-shadow: 0px 6px 30px 3px rgba(0,0,0,0.29);
+    width: 320px;
+    height: 320px;
+    margin-bottom: 20px;
 }
 
 @media (min-width: 720px) {
