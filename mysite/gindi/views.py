@@ -18,6 +18,7 @@ def image_labels(request):
                 f.write(chunk)
         with io.open("picture.jpg", "rb") as pic:
             content = pic.read()
+        gen_image(content)
         color = get_color_by_image(content)
         labels = get_image_data(content)
         song = get_recommendations(color, labels)["tracks"][0]

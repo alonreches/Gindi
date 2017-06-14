@@ -1,3 +1,5 @@
+from time import sleep
+
 import webcolors
 from google.cloud import vision
 
@@ -15,9 +17,14 @@ LIKELINESS = {"UNKNOWN": 0,
 vision_client = vision.Client("AIzaSyArQ4BOzwsUvc1gBiXMM580DIxCeEP58vs")
 
 
+def gen_image(image):
+    global image_data
+    image_data = vision_client.image(content=image)
+    sleep(3)
+
 def get_image_data(image):
     result = {}
-    image_data = vision_client.image(content=image)
+    # image_data = vision_client.image(content=image)
     safe_search = image_data.detect_safe_search()
     result["violence"] = LIKELINESS[safe_search.violence.name]
     labels = image_data.detect_labels()
@@ -32,7 +39,7 @@ def get_image_data(image):
 
 def get_keywords(image):
     res = []
-    image_data = vision_client.image(content=image)
+    # image_data = vision_client.image(content=image)
     labels = image_data.detect_labels()
     for label in labels:
         res.append(label.description)
@@ -40,7 +47,7 @@ def get_keywords(image):
 
 
 def get_color_by_image(image):
-    image_data = vision_client.image(content=image)
+    # image_data = vision_client.image(content=image)
     properties = image_data.detect_properties()
     colors = properties.colors
     colors.sort(key=lambda x: x.score, reverse=True)
