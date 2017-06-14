@@ -21,8 +21,8 @@ angular.module('Artify')
                 controller: 'UploadController'
             };
         }])
-.directive('apsUploadFile', apsUploadFile)
-directive('takePicture', apsUploadFile)
+    .directive('apsUploadFile', apsUploadFile)
+    .directive('takePicture', takePicture)
 ;
 
 function apsUploadFile() {
@@ -69,6 +69,14 @@ function takePicture(){
 }
 
 function takePictureLink(scope, element, attrs) {
+    var input = $(element[0].querySelector('#fileInput'));
+    var button = $(element[0].querySelector('#cameraButton'));
+    if (input.length && button.length) {
+        button.click(function (e) {
+            input.click();
+        });
+    }
+
 }
 
 
