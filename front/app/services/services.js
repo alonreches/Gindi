@@ -10,11 +10,12 @@ angular.module('Artify')
             var BASE_URL = "";
 
             service.results = {
-                album_cover: 'assets/images/album_cover_example.jpg',
-                title: 'Error :(',
+                artwork: 'assets/images/album_cover_example.jpg',
+                title: 'Because',
                 artist: 'Beatles',
                 album: 'Abby Road',
-                mainGenre: 'Rock'
+                color: 'Red',
+                words: ['Psychadelic', 'Cool', 'Kids']
             };
 
             service.file = {};
@@ -51,7 +52,8 @@ angular.module('Artify')
                             title: data.name,
                             artist: data.artist,
                             album: data.album,
-                            artwork: data.cover
+                            artwork: data.cover,
+                            words: data.words
                         };
                         $location.path('/results');
                     })

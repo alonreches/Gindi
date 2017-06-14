@@ -9,15 +9,28 @@
         <div class="song-title">
             <ul class="song-details">
                 <li>
-                    artist: <b>{{results.artist}}</b>
+                    Artist: <b>{{results.artist}}</b>
                 </li>
                 <li>
-                    album: <b>{{results.album}}</b>
+                    Album: <b>{{results.album}}</b>
                 </li>
             </ul>
         </div>
         <div class="art-piece">
             <img src="{{artImage}}">
+            <ul>
+                <h3>
+                    Art piece analysis
+                </h3>
+                <li>
+                    Labels: <span ng-repeat="word in results.words"><b> {{word}}<span ng-hide="$last">,</span><span ng-show="$last">.</span> </b></span>
+                </li>
+                <li>
+                    <div style="display: inline-block">Color: <b>{{results.color}}</b></div>
+                    <div class="color-example" style="background-color: {{results.color}}; display: inline-block; margin-left: 6px;">
+                    </div>
+                </li>
+            </ul>
         </div>
     </div>
 </div>
