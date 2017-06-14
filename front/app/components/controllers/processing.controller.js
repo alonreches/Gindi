@@ -1,6 +1,6 @@
 angular.module('Artify')
 
-    .controller('HomeController', ['$scope', '$rootScope', '$location', '$mdMedia', '$mdMenu',
+    .controller('ProcessingController', ['$scope', '$rootScope', '$location', '$mdMedia', '$mdMenu',
         function ($scope, $rootScope, $location, $mdMedia, $mdMenu) {
 
 

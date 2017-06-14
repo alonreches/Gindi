@@ -14,5 +14,9 @@ angular.module('Artify')
                 templateUrl: 'app/components/views/results.view.html',
                 controller: 'ResultsController'
             })
+            .when('/processing', {
+                templateUrl: 'app/components/views/processing.view.html',
+                controller: 'ProcessingController'
+            })
             .otherwise({redirectTo: '/'});
     }]);
