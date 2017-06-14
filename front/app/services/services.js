@@ -8,7 +8,7 @@ angular.module('Artify')
 
             var service = {};
 
-            service.result = {
+            service.results = {
                 artwork_image: '',
                 title: 'Because',
                 artist: 'Beatles',
