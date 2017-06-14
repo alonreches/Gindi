@@ -3,8 +3,8 @@
  */
 
 angular.module('Artify')
-    .factory('WebService', ['$http', '$rootScope',
-        function WebServiceFactory($http, $rootScope) {
+    .factory('WebService', ['$http', '$rootScope', '$location',
+        function WebServiceFactory($http, $rootScope, $location) {
 
             var service = {};
             var BASE_URL = "";
@@ -22,7 +22,21 @@ angular.module('Artify')
             return service;
 
             function analyze() {
-                return $http.get(FIRST_ANSWER_URL, {params: {'firstQuestion': firstQuestion}});
+                $http.post(BASE_URL, fd, {
+                    // this cancels AngularJS normal serialization of request
+                    transformRequest: angular.identity,
+                    // this lets browser set `Content-Type: multipart/form-data`
+                    // header and proper data boundary
+                    headers: {'Content-Type': undefined}
+                })
+                    .success(function () {
+
+                        $location.path('/results');
+                    })
+
+                    .error(function () {
+                        console.log("Something wrong :(");
+                    });
             }
 
         }]);
