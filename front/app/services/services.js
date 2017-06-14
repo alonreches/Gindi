@@ -44,7 +44,7 @@ angular.module('Artify')
                     headers: {'Content-Type': undefined}
                 })
                     .success(function (result) {
-
+                        console.log(data.cover);
                         var data = result;
                         service.results = {
                             album_cover: 'assets/images/album_cover_example.jpg',
