@@ -1,7 +1,7 @@
 import webcolors
 from google.cloud import vision
 
-WHITE_LABELS_LIST = ["modern", "graffiti", "acrylic", "child", "psychedelic", "monochrome",
+WHITE_LABELS_LIST = ["modern","graffiti", "acrylic", "child", "psychedelic", "monochrome",
                      "black and white", "pattern", "classical", "cartoon", "joy", "sorrow",
                      "surprise", "middle ages", "church", "place of worship", "atmosphere",
                      "space", "illustration", "text"]
