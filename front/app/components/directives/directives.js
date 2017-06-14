@@ -50,6 +50,7 @@ function apsUploadFileLink(scope, element, attrs) {
         if (files[0]) {
             scope.file = files[0];
             scope.fileUploaded = true;
+
         } else {
             scope.file = null;
         }

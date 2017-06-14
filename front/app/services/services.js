@@ -17,34 +17,52 @@ angular.module('Artify')
                 mainGenre: 'Rock'
             };
 
+            service.file = {};
+            service.artImage = {};
+
             service.analyze = analyze;
 
             return service;
 
             function analyze(file) {
+                service.file = file;
                 var fd = new FormData();
                 if (file != null) {
+                    convertFileToImage();
                     fd.append('myFile', file);
                 } else {
                     console.error("Problem in the analyze function!");
                     return;
                 }
                 console.log("Starting upload!");
-                $http.post(BASE_URL, fd, {
-                    // this cancels AngularJS normal serialization of request
-                    transformRequest: angular.identity,
-                    // this lets browser set `Content-Type: multipart/form-data`
-                    // header and proper data boundary
-                    headers: {'Content-Type': undefined}
-                })
-                    .success(function () {
+                $location.path('/results');
+                // $http.post(BASE_URL, fd, {
+                //     // this cancels AngularJS normal serialization of request
+                //     transformRequest: angular.identity,
+                //     // this lets browser set `Content-Type: multipart/form-data`
+                //     // header and proper data boundary
+                //     headers: {'Content-Type': undefined}
+                // })
+                //     .success(function () {
+                //
+                //         $location.path('/results');
+                //     })
+                //
+                //     .error(function () {
+                //         console.log("Something wrong :(");
+                //     });
+            }
 
-                        $location.path('/results');
-                    })
+            function convertFileToImage() {
+                var reader = new FileReader();
 
-                    .error(function () {
-                        console.log("Something wrong :(");
-                    });
+                reader.addEventListener("load", function () {
+                    service.artImage = reader.result;
+                }, false);
+
+                if (file) {
+                    reader.readAsDataURL(file);
+                }
             }
 
         }]);
